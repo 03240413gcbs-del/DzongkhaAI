@@ -1,0 +1,44 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Model weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.h5
+*.keras
+
+# Downloaded model folders and caches
+models/
+model/
+.cache/
+cache/
+huggingface/
+hf_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db

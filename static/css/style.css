@@ -1,0 +1,1250 @@
+
+/* ==========================================
+   DZONGKHAAI - PROFESSIONAL DESIGN
+   Bhutan-inspired colour palette
+========================================== */
+
+
+/* ==========================================
+   1. DESIGN VARIABLES
+========================================== */
+
+:root {
+    --burgundy: #641E32;
+    --burgundy-dark: #481323;
+    --burgundy-light: #87394F;
+
+    --cream: #F7F0E4;
+    --cream-dark: #EFE4D2;
+
+    --gold: #C6A15B;
+    --gold-light: #E1C88F;
+
+    --charcoal: #352B2D;
+    --text-secondary: #786D6D;
+
+    --white: #FFFFFF;
+    --border: #E9DFD2;
+
+    --success: #54866B;
+    --error: #B34D4D;
+
+    --shadow:
+        0 12px 35px rgba(53, 43, 45, 0.07);
+
+    --transition: 0.25s ease;
+}
+
+
+/* ==========================================
+   2. RESET AND GLOBAL STYLES
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Inter", sans-serif;
+
+    color: var(--charcoal);
+
+    background:
+        radial-gradient(
+            circle at 10% 5%,
+            rgba(198, 161, 91, 0.09),
+            transparent 28%
+        ),
+        linear-gradient(
+            135deg,
+            #FBF7F0,
+            var(--cream)
+        );
+
+    line-height: 1.6;
+}
+
+button,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+::selection {
+    background: var(--gold-light);
+    color: var(--burgundy-dark);
+}
+
+
+/* ==========================================
+   3. HEADER
+========================================== */
+
+.main-header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.88);
+
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 19px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    text-decoration: none;
+    color: var(--charcoal);
+}
+
+.brand-symbol {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: var(--burgundy);
+    color: var(--gold-light);
+
+    font-family: "Noto Serif Tibetan", serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.brand-text h1 {
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+
+    color: var(--burgundy);
+    line-height: 1.2;
+}
+
+.brand-text span {
+    display: block;
+    margin-top: 4px;
+
+    color: var(--text-secondary);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+}
+
+.header-tag {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 9px 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 30px;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: var(--success);
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 4px rgba(84, 134, 107, 0.12);
+}
+
+
+/* ==========================================
+   4. MAIN CONTENT
+========================================== */
+
+.main-content {
+    max-width: 1050px;
+    width: calc(100% - 50px);
+
+    margin: 0 auto;
+    padding: 65px 0 55px;
+}
+
+
+/* ==========================================
+   5. HERO SECTION
+========================================== */
+
+.welcome-section {
+    max-width: 760px;
+    margin: 0 auto 45px;
+
+    text-align: center;
+}
+
+.eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 19px;
+
+    color: var(--burgundy);
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.eyebrow-line {
+    width: 28px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+.welcome-section h2 {
+    color: var(--charcoal);
+
+    font-size: clamp(30px, 5vw, 46px);
+    font-weight: 800;
+
+    letter-spacing: -1.8px;
+    line-height: 1.2;
+}
+
+.welcome-section h2 span {
+    display: block;
+    color: var(--burgundy);
+}
+
+.welcome-description {
+    max-width: 650px;
+
+    margin: 19px auto 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.hero-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    margin-top: 25px;
+}
+
+.hero-decoration span {
+    width: 5px;
+    height: 5px;
+
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+.hero-decoration span:nth-child(2) {
+    width: 23px;
+    height: 2px;
+
+    border-radius: 3px;
+}
+
+
+/* ==========================================
+   6. WORKSPACE
+========================================== */
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 22px;
+
+    align-items: stretch;
+}
+
+.translation-card {
+    min-width: 0;
+
+    padding: 25px;
+
+    background: var(--white);
+
+    border: 1px solid var(--border);
+    border-radius: 18px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ==========================================
+   7. CARD HEADINGS
+========================================== */
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.heading-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-number {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--cream);
+    color: var(--burgundy);
+
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.heading-left h3 {
+    color: var(--charcoal);
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.heading-left p {
+    margin-top: 3px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+.language-badge {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: #F6F0E8;
+    color: var(--burgundy);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+
+    white-space: nowrap;
+}
+
+.language-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: var(--gold);
+}
+
+.dzongkha-badge {
+    background: #F2E9EB;
+}
+
+
+/* ==========================================
+   8. INPUT AREA
+========================================== */
+
+.input-area {
+    margin-top: 22px;
+}
+
+.input-area label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--charcoal);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.input-area textarea {
+    display: block;
+
+    width: 100%;
+    min-height: 180px;
+
+    padding: 15px;
+
+    resize: vertical;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #FFFEFC;
+    color: var(--charcoal);
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    transition: var(--transition);
+}
+
+.input-area textarea::placeholder {
+    color: #B0A6A0;
+}
+
+.input-area textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 3px rgba(198, 161, 91, 0.12);
+
+    background: var(--white);
+}
+
+.input-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 9px;
+}
+
+.input-hint {
+    color: #9A9090;
+    font-size: 10px;
+}
+
+.input-limit {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================================
+   9. SUGGESTION BUTTONS
+========================================== */
+
+.suggestion-section {
+    margin-top: 22px;
+}
+
+.suggestion-label {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: var(--text-secondary);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+}
+
+.suggestion-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.suggestion-chip {
+    padding: 8px 11px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: #FFFEFC;
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.suggestion-chip:hover {
+    background: var(--cream);
+    border-color: var(--gold);
+    color: var(--burgundy);
+
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   10. GENERATE BUTTON
+========================================== */
+
+.generate-section {
+    margin-top: auto;
+    padding-top: 25px;
+}
+
+.primary-btn {
+    width: 100%;
+    min-height: 49px;
+
+    padding: 12px 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: var(--burgundy);
+    color: var(--white);
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 14px rgba(100, 30, 50, 0.16);
+
+    transition: var(--transition);
+}
+
+.primary-btn:hover:not(:disabled) {
+    background: var(--burgundy-dark);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(100, 30, 50, 0.22);
+}
+
+.primary-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.primary-btn:disabled {
+    opacity: 0.75;
+}
+
+.button-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button-icon {
+    color: var(--gold-light);
+    font-size: 17px;
+}
+
+.button-arrow {
+    font-size: 19px;
+    transition: transform var(--transition);
+}
+
+.primary-btn:hover .button-arrow {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================
+   11. STATUS MESSAGE
+========================================== */
+
+.status-message {
+    min-height: 18px;
+
+    margin-top: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+    text-align: center;
+}
+
+.status-message.error {
+    color: var(--error);
+}
+
+.status-message.success {
+    color: var(--success);
+}
+
+
+/* ==========================================
+   12. RESPONSE AREA
+========================================== */
+
+.result-card {
+    min-height: 450px;
+}
+
+.response-container {
+    flex: 1;
+
+    display: flex;
+
+    min-height: 290px;
+
+    margin-top: 20px;
+
+    padding: 17px;
+
+    border: 1px solid var(--border);
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #FFFEFC,
+            #FBF8F2
+        );
+}
+
+.response-content {
+    width: 100%;
+
+    color: var(--charcoal);
+
+    font-family: "Noto Serif Tibetan", serif;
+    font-size: 17px;
+    line-height: 2.1;
+
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.response-content.has-response {
+    align-self: flex-start;
+}
+
+.empty-state {
+    width: 100%;
+    min-height: 255px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 16px;
+
+    background: var(--cream);
+    color: var(--burgundy);
+
+    font-family: "Noto Serif Tibetan", serif;
+    font-size: 25px;
+}
+
+.empty-title {
+    color: var(--charcoal);
+
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.empty-description {
+    max-width: 230px;
+
+    margin-top: 8px;
+
+    color: var(--text-secondary);
+
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   13. RESPONSE FOOTER
+========================================== */
+
+.response-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding-top: 17px;
+}
+
+.response-information {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.response-indicator {
+    width: 7px;
+    height: 7px;
+
+    background: var(--success);
+    border-radius: 50%;
+}
+
+.response-note {
+    color: var(--text-secondary);
+    font-size: 10px;
+}
+
+.copy-btn {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 7px;
+
+    background: var(--white);
+    color: var(--burgundy);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    transition: var(--transition);
+}
+
+.copy-btn:hover:not(:disabled) {
+    border-color: var(--gold);
+    background: var(--cream);
+}
+
+.copy-btn:disabled {
+    opacity: 0.45;
+}
+
+
+/* ==========================================
+   14. WARNING MESSAGE
+========================================== */
+
+.warning-message {
+    min-height: 15px;
+
+    margin-top: 10px;
+
+    color: #9A7B45;
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   15. FEATURES SECTION
+========================================== */
+
+.features-section {
+    margin-top: 65px;
+}
+
+.features-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: var(--text-secondary);
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 17px;
+}
+
+.feature {
+    padding: 22px 18px;
+
+    border: 1px solid var(--border);
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.72);
+
+    text-align: center;
+
+    transition: var(--transition);
+}
+
+.feature:hover {
+    transform: translateY(-4px);
+
+    background: var(--white);
+
+    box-shadow: var(--shadow);
+}
+
+.feature-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 13px;
+
+    border-radius: 12px;
+
+    background: var(--cream);
+    color: var(--burgundy);
+
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.feature h4 {
+    margin-bottom: 7px;
+
+    color: var(--charcoal);
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.feature p {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   16. DISCLAIMER
+========================================== */
+
+.disclaimer {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    margin-top: 28px;
+    padding: 15px 17px;
+
+    border: 1px solid rgba(198, 161, 91, 0.25);
+    border-radius: 10px;
+
+    background: rgba(198, 161, 91, 0.07);
+}
+
+.disclaimer-icon {
+    color: var(--gold);
+
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.disclaimer p {
+    color: var(--text-secondary);
+
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   17. FOOTER
+========================================== */
+
+.main-footer {
+    border-top: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.footer-top,
+.footer-bottom {
+    max-width: 1050px;
+    margin: auto;
+
+    padding: 20px 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.footer-top {
+    border-bottom: 1px solid var(--border);
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.footer-symbol {
+    color: var(--burgundy);
+
+    font-family: "Noto Serif Tibetan", serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.footer-brand strong {
+    display: block;
+
+    color: var(--burgundy);
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.footer-brand span:last-child {
+    display: block;
+
+    margin-top: 2px;
+
+    color: var(--text-secondary);
+
+    font-size: 10px;
+}
+
+.footer-tag {
+    color: var(--text-secondary);
+
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.footer-bottom {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    color: #958A88;
+    font-size: 9px;
+}
+
+
+/* ==========================================
+   18. LOADING SPINNER
+========================================== */
+
+.spinner {
+    width: 15px;
+    height: 15px;
+
+    display: inline-block;
+    flex-shrink: 0;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: var(--white);
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ==========================================
+   19. TABLET RESPONSIVENESS
+========================================== */
+
+@media (max-width: 850px) {
+
+    .main-content {
+        padding-top: 50px;
+    }
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .result-card {
+        min-height: 400px;
+    }
+
+    .features-section {
+        margin-top: 50px;
+    }
+
+}
+
+
+/* ==========================================
+   20. MOBILE RESPONSIVENESS
+========================================== */
+
+@media (max-width: 600px) {
+
+    .header-container {
+        padding: 14px 18px;
+    }
+
+    .brand-symbol {
+        width: 42px;
+        height: 42px;
+
+        font-size: 15px;
+    }
+
+    .brand-text h1 {
+        font-size: 18px;
+    }
+
+    .brand-text span {
+        font-size: 8px;
+    }
+
+    .header-tag {
+        padding: 7px 9px;
+
+        font-size: 8px;
+    }
+
+    .main-content {
+        width: calc(100% - 30px);
+
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .welcome-section {
+        margin-bottom: 30px;
+    }
+
+    .welcome-section h2 {
+        font-size: 31px;
+        letter-spacing: -1px;
+    }
+
+    .welcome-description {
+        font-size: 12px;
+    }
+
+    .translation-card {
+        padding: 18px;
+    }
+
+    .card-heading {
+        align-items: flex-start;
+    }
+
+    .heading-left {
+        gap: 9px;
+    }
+
+    .heading-left h3 {
+        font-size: 13px;
+    }
+
+    .heading-left p {
+        font-size: 10px;
+    }
+
+    .section-number {
+        width: 31px;
+        height: 31px;
+    }
+
+    .language-badge {
+        padding: 6px 8px;
+
+        font-size: 8px;
+    }
+
+    .input-area textarea {
+        min-height: 160px;
+        font-size: 12px;
+    }
+
+    .input-hint {
+        font-size: 9px;
+    }
+
+    .suggestion-chip {
+        font-size: 9px;
+    }
+
+    .primary-btn {
+        font-size: 11px;
+    }
+
+    .response-container {
+        min-height: 270px;
+        padding: 13px;
+    }
+
+    .response-content {
+        font-size: 16px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-section {
+        margin-top: 42px;
+    }
+
+    .footer-top,
+    .footer-bottom {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .footer-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+}
+
+
+/* ==========================================
+   21. SMALL MOBILE DEVICES
+========================================== */
+
+@media (max-width: 380px) {
+
+    .header-tag {
+        font-size: 7px;
+        gap: 5px;
+    }
+
+    .welcome-section h2 {
+        font-size: 27px;
+    }
+
+    .translation-card {
+        padding: 15px;
+    }
+
+    .language-badge {
+        font-size: 7px;
+    }
+
+    .heading-left h3 {
+        font-size: 12px;
+    }
+
+}
+
+
+/* ==========================================
+   22. ACCESSIBILITY
+========================================== */
+
+button:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
